@@ -48,6 +48,7 @@ df = pivot_and_clean(df, fillna=0)
 df = clean_spark_cols(df)
 df = df.reset_index()
 df['country_iso'] = country_iso
+df.columns = ['date', 'occupancy', 'occupancy_per_million', 'country_iso']
 
 # COMMAND ----------
 
