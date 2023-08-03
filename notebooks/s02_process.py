@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 
 # COMMAND ----------
 
-dbutils.widgets.text("country_iso3")
+dbutils.widgets.text("country_iso3", "DZA")
 
 # COMMAND ----------
 
