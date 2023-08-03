@@ -20,7 +20,11 @@ import matplotlib.pyplot as plt
 # COMMAND ----------
 
 dbutils.widgets.text("country_iso3", "DZA")
+
+# COMMAND ----------
+
 country_iso = dbutils.widgets.get("country_iso3")
+print(country_iso)
 
 # COMMAND ----------
 
@@ -84,6 +88,3 @@ df_spark.write.format("delta").mode("overwrite").option(
 # MAGIC CREATE TABLE IF NOT EXISTS demo_db.demo_covid_stats
 # MAGIC USING DELTA
 # MAGIC LOCATION '/mnt/raw/temp/workflow_demo/demo_db/demo_covid_stats'
-
-# COMMAND ----------
-
